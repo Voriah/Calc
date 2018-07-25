@@ -1,0 +1,108 @@
+body{
+  background-color: rgb(2, 31, 59);
+
+}
+.presets{
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.presets div{
+  display: flex;
+  height: 150px;
+  width: 150px;
+  margin-left: 50px;
+  opacity: 0.75;
+  background-image: linear-gradient(to bottom, slategrey, rgb(2, 31, 59));
+  border-radius: 10%;
+  color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Tinos', serif;
+  font-size: 30px;
+  border-style: ridge;
+  border-color: rgb(175, 192, 209);
+  border-width: 2px;
+} 
+.presets div:hover{
+  opacity: 0.5;
+}
+
+.toggle{
+  display: flex;
+  height: 75px;
+  width: 75%;
+  margin-left: 12.5%;
+  background-color: slategray;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+}
+.toggle div{
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Tinos', serif;
+  font-size: 30px;
+  color: white;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  background-color: rgb(2, 31, 59);
+  opacity: 0.9;
+}
+
+.toggle div:hover{
+  opacity: 0.5;
+}
+.list{
+  display: flex;
+  height: 600px;
+  width: 75%;
+  justify-content: space-evenly;
+  background-color: lightslategray;
+  margin-left: 12.5%;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  
+}
+
+.col div{
+  width: 98%;
+  height: 24.5%;
+  background-color: rgb(2, 31, 59);
+  
+  border-radius: 3px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  opacity: 0.75;
+  font-family: 'Tinos', serif;
+  font-size: 30px;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+.col div:hover{
+  opacity: 0.5;
+}
+
+.col{
+  width: 100%;
+  height: 100%; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+}
