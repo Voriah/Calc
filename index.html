@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Tinos" rel="stylesheet">
   <title>Calculator</title>
@@ -16,6 +17,24 @@
     <div>Dr. Steenis</div>
     <div>Dr. Yoo</div>
   </div>
+  
+  <div class="patient">
+    <div id="pname">Patient's Name: <input type="text" size="15" maxlength="15"></div>
+    <div id="lname">Last Name: <input type="text" size="15" maxlength="15"></div>
+    <div id="weight">
+      Weight: <input type="number" maxlength="6" min="0" max="999999" oninput="this.value=this.value.slice(0,this.maxLength)" name="" id="w">
+      <input type="radio" name="weight" value="lb" id="lb">lb                      
+      <input type="radio" name="weight" value="kg" id="kg">kg                      
+    </div> 
+    <div id="id">ID:<input type="number" maxlength="6" min="0" max="999999" name="" id="" oninput="this.value=this.value.slice(0,this.maxLength)"></div>
+    <div id="species">
+      Species:
+      <input type="radio" name="species" value="canine" id="">Canine
+      <input type="radio" name="species" value="feline" id="">Feline
+    </div>
+    
+  </div>
+
   <div class="toggle">
     <div>Injectable</div>
     <div>Dispense</div>
@@ -23,41 +42,112 @@
   <div class="list">
     <div class="col" id="col1">
       <div onclick="anti()" id="r1c1">Antibiotics</div>
-      <div onclick="ana()"id="r2c1">Analgesics</div>
-      <div id="r3c1">Anesthetics</div>
-      <div id="r4c1"></div>
+      <div onclick="ana()" id="r2c1">Analgesics</div>
+      <div onclick="sed()" id="r3c1">Sedatives</div>
+      <div onclick="ster()" id="r4c1">Steroids</div>
     </div>
     <div class="col" id="col2">
-      <div onclick="info()" class="antibiotics" id="r1c2" style="display: none;">Enrofloxacin</div>
-      <div onclick="info()" class="antibiotics" id="r2c2" style="display: none;">Clindamycin</div>
-      <div onclick="info()" class="antibiotics" id="r3c2" style="display: none;">Gentamicin</div>
-      <div onclick="info()" class="antibiotics" id="r4c2" style="display: none;">Amoxicillin</div>
-      <div onclick="info()" class="antibiotics" id="r5c2" style="display: none;">Cefazolin</div>
-      <div onclick="info()" class="antibiotics" id="r6c2" style="display: none;">Unasyn</div>
-      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Ampicillin</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Meloxicam</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Butorphanol</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Hydromorphone</div>
+      <div onclick="info()" class="sedatives" id="r1c2" style="display: none;">Acepromazine</div>
+      <div onclick="info()" class="analgesics" id="r2c2" style="display: none;">Adequan</div>
+      <div onclick="info()" class="antibiotics" id="r3c2" style="display: none;">Amikacin</div>
+      <div onclick="info()" class="antibiotics" id="r4c2" style="display: none;">Aminophylline</div>
+      <div onclick="info()" class="antibiotics" id="r5c2" style="display: none;">Amoxicillin</div>
+      <div onclick="info()" class="antibiotics" id="r6c2" style="display: none;">Ampicillin</div>
+      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Antesedan</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Apomorphine</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Atropine</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Bupivicaine</div>
       <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Buprenorphine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Onsior</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Rimadyl</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Butorphanol</div>
+      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Cefazolin</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Cerenia</div>
+      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Clindamycin</div>
+      <div onclick="info(); convenia(); checkWeight()" class="antibiotics" id="r7c2" style="display: none;">Convenia</div>
+      <div onclick="info()" class="steroids" id="r7c2" style="display: none;">Depo-Medrol</div>
+      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Dexdomitor</div>
+      <div onclick="info()" class="steroids" id="r7c2" style="display: none;">Dexamethasone</div>
+      <div onclick="info()" class="steroids" id="r7c2" style="display: none;">Dexamethasone SP</div>
+      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Diazepam</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Diphenhydramine</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Dopamine</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Doxapram</div>
+      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Enrofloxacin</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Epinephrine</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Famotidine</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Furosemide</div>
+      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Gentamicin</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Hydromorphone</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Iron Dextran</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Kenelog</div>
+      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Ketamine</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Lidocaine</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Meloxicam</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Methocarbamol</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Metoclopramide</div>
+      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Metronidazole</div>
+      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Midazolam</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Naloxone</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Ondansetron</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Percorten-V</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Praziquantel</div>
+      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Propofol</div>
+      <div onclick="info()" class="steroids" id="r7c2" style="display: none;">Solu-Medrol</div>
+      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Vitamin B-12</div>
+      
 
     </div>
     <div class="col" id="col3">
-      <div class="input" id="r1c3" style="display: none;"><input type="number"></div>
-      <div class="input" id="r2c3" style="display: none;"></div>
-      <div class="input" id="r3c3" style="display: none;"></div>
-      <div class="input" id="r4c3" style="display: none;"></div>
+      <div class="dose" id="doseage" style="display: none;">Dose:
+        <input id="dRange" type="range" name="range" oninput="dInput.value=dRange.value">mg/kg
+        <input id="dInput" type="number" min="0" max="9999" maxlength="4"oninput="dRange.value=dInput.value; this.value=this.value.slice(0,this.maxLength)">
+      </div>
+      
+      <div class="dose" id="times" style="display: none;">Times a day:
+        <input id="tRange" type="range" name="range" min="0" max="4" step="1" oninput="tInput.value=tRange.value">
+        <input id="tInput" type="number" min="0" max="4" maxlength="1" oninput="tRange.value=tInput.value; this.value=this.value.slice(0,this.maxLength)">
+      </div>
+      <div class="dose" id="days" style="display: none;">Days:
+        <input id="dayRange" type="range" name="range" oninput="dayInput.value=dayRange.value">
+        <input id="dayInput" type="number" min="0" max="180" step="1" maxlength="3" oninput="dayRange.value=dayInput.value; this.value=this.value.slice(0,this.maxLength)">
+      </div>
+      <div class="dose" id="update" style="display: none;">Update</div>
     </div>
     <div class="col" id="col4">
-      <div id="r1c4" style="display: none;"></div>
-      <div id="r2c4" style="display: none;"></div>
-      <div id="r3c4" style="display: none;"></div>
-      <div id="r4c4" style="display: none;"></div>
+      <div id="sig1" style="display: none;">
+        <p id="sigName1"></p>
+        <p id="dose1"></p>
+        <p id="mgkg1"></p>
+      </div>
+      <div id="sig2" style="display: none;">
+        <p id="sigName2"></p>
+        <p id="dose2"></p>
+        <p id="mgkg2"></p>
+      </div>
+      <div id="sig3" style="display: none;">
+        <p id="sigName3"></p>
+        <p id="dose3"></p>
+        <p id="mgkg3"></p>
+      </div>
+      <div id="sig4" style="display: none;">
+        <p id="sigName4"></p>
+        <p id="dose4"></p>
+        <p id="mgkg4"></p>
+      </div>
+      <div id="sig5" style="display: none;">
+        <p id="sigName5"></p>
+        <p id="dose5"></p>
+        <p id="mgkg5"></p>
+      </div>
+      <div id="sig6" style="display: none;">
+        <p id="sigName6"></p>
+        <p id="dose6"></p>
+        <p id="mgkg6"></p>
+      </div>
     </div>
   </div>
   
   
   <script src="script.js"></script>
+  <script src="injectable.js"></script>
 </body>
 </html>
