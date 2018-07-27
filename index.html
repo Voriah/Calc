@@ -5,94 +5,398 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Tinos" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Calculator</title>
 </head>
 <body>
-  <div class="presets">
-    <div>Dr. Buehler</div>
-    <div>Dr. Malecek</div>
-    <div>Dr. Ota</div>
-    <div>Dr. Steenis</div>
-    <div>Dr. Yoo</div>
-  </div>
-  
-  <div class="patient">
-    <div id="pname">Patient's Name: <input type="text" size="15" maxlength="15"></div>
-    <div id="lname">Last Name: <input type="text" size="15" maxlength="15"></div>
-    <div id="weight">
-      Weight: <input type="number" maxlength="6" min="0" max="999999" oninput="this.value=this.value.slice(0,this.maxLength)" name="" id="w">
-      <input type="radio" name="weight" value="lb" id="lb">lb                      
-      <input type="radio" name="weight" value="kg" id="kg">kg                      
-    </div> 
-    <div id="id">ID:<input type="number" maxlength="6" min="0" max="999999" name="" id="" oninput="this.value=this.value.slice(0,this.maxLength)"></div>
-    <div id="species">
-      Species:
-      <input type="radio" name="species" value="canine" id="">Canine
-      <input type="radio" name="species" value="feline" id="">Feline
+  <nav class="nav-center blue-grey darken-2">
+    <div class="center-align nav-wrapper">
+      <ul class="hide-on-med-and-down r ">
+        <li>
+          <a class="center-align waves-effect waves-light btn-large z-depth-5">Dr. Buehler
+            <i class="material-icons right">pets</i>
+          </a>
+        </li>
+        <li>
+          <a class="center-align waves-effect waves-light btn-large z-depth-5">Dr. Malecek
+            <i class="material-icons right">pets</i>
+          </a>
+        </li>
+        <li>
+          <a class="center-align  waves-effect waves-light btn-large z-depth-5">Dr. Ota
+            <i class="material-icons right">pets</i>
+          </a>
+        </li>
+        <li>
+          <a class="center-align  waves-effect waves-light btn-large z-depth-5">Dr. Steenis
+            <i class="material-icons right">pets</i>
+          </a>
+        </li>
+        <li>
+          <a class="center-align  waves-effect waves-light btn-large z-depth-5">Dr. Yoo
+            <i class="material-icons right">pets</i>
+          </a>
+        </li>
+      </ul>
     </div>
-    
+  </nav>
+
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="col s1"></div>
+      <div class="input-field col s2">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="icon_prefix" type="text" class="">
+        <label for="icon_prefix">Patient Name</label>
+      </div>
+      <div class="input-field col s2">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="icon_last" type="text" class="">
+        <label for="icon_last">Last Name</label>
+      </div>
+      <div class="input-field col s2">
+        <i class="material-icons prefix">label_outline</i>
+        <input id="icon_id" type="number" class="">
+        <label for="icon_id">ID</label>
+      </div>
+      <div class="input-field col s2">
+        <i class="material-icons prefix">get_app</i>
+        <input id="icon_weight" type="number" class="">
+        <label for="icon_weight">Weight</label>
+      </div> 
+      <div class="input-field col s1">
+        <form action="#">
+          <p>
+            
+            <label>
+              <input id="lb" name="group1" type="radio" checked />
+              <span>Pounds</span>
+            </label>
+          </p>
+          <p>
+            
+            <label>
+              <input id="kg" name="group1" type="radio" />
+              <span>Kilograms</span>
+            </label>
+          </p>
+        </form>
+      </div>
+      <div class="input-field col s2">
+        <form action="#">
+          <p>
+            <i class="material-icons prefix">pets</i>
+            <label>
+              <input name="group1" type="radio" checked />
+              <span>Canine</span>
+            </label>
+          </p>
+          <p>
+            <i class="material-icons prefix">pets</i>
+            <label>
+              <input name="group1" type="radio" />
+              <span>Feline</span>
+            </label>
+          </p>
+        </form>
+      </div>
+      <div class="col s1"></div>
+    </div>
+  </form>
+</div>
+
+  <div class="row"> 
+    <div class="col s1"></div>
+    <div class="col s2">
+        <ul class="collection">
+          <li class="collection-item">
+            <div onclick="anti()" id="r1c1">Antibiotics
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="ana()" id="r2c1">Analgesics
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="sed()" id="r3c1">Sedatives
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="ster()" id="r4c1">Steroids
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+        </ul>
+    </div>
+    <div class="col s2">
+        <ul class="collection antibiotics" style="display: none;">
+          <li class="collection-item">
+            <div onclick="info()"  id="">Amikacin
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Amoxicillin
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item ">
+            <div onclick="info()">Ampicillin
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Cefazolin
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Clindamycin
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info(); convenia(); checkWeight()">Convenia
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Enrofloxacin
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Gentamicin
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Metronidazole
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="collection analgesics" style="display: none;">
+          <li class="collection-item">
+            <div onclick="info()" id="">Adequan
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Bupivicaine
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item ">
+            <div onclick="info()">Buprenorphine
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Butorphanol
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Hydromorphone
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Lidocaine
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Meloxicam
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Methocarbamol
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="collection sedatives" style="display: none;">
+          <li class="collection-item">
+            <div onclick="info()" id="">Acepromazine
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()" id="">Antesedan
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Dexdomitor
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item ">
+            <div onclick="info()">Diazepam
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Ketamine
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Midazolam
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Propofol
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="collection steroids" style="display: none;">
+          <li class="collection-item">
+            <div onclick="info()" id="">Depo-Medrol
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Dexamethasone
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item ">
+            <div onclick="info()">Dexamethasone SP
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Kenelog
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Solu-Medrol
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+          <li class="collection-item">
+            <div onclick="info()">Propofol
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+          </li>
+        </ul>
+    </div>
+    <div class="col s2"></div>
+    <div class="col s2"></div>
+    <div class="col s1"></div>
   </div>
 
-  <div class="toggle">
-    <div>Injectable</div>
-    <div>Dispense</div>
-  </div>
-  <div class="list">
-    <div class="col" id="col1">
-      <div onclick="anti()" id="r1c1">Antibiotics</div>
-      <div onclick="ana()" id="r2c1">Analgesics</div>
-      <div onclick="sed()" id="r3c1">Sedatives</div>
-      <div onclick="ster()" id="r4c1">Steroids</div>
-    </div>
     <div class="col" id="col2">
-      <div onclick="info()" class="sedatives" id="r1c2" style="display: none;">Acepromazine</div>
-      <div onclick="info()" class="analgesics" id="r2c2" style="display: none;">Adequan</div>
-      <div onclick="info()" class="antibiotics" id="r3c2" style="display: none;">Amikacin</div>
-      <div onclick="info()" class="antibiotics" id="r4c2" style="display: none;">Aminophylline</div>
-      <div onclick="info()" class="antibiotics" id="r5c2" style="display: none;">Amoxicillin</div>
-      <div onclick="info()" class="antibiotics" id="r6c2" style="display: none;">Ampicillin</div>
-      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Antesedan</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Apomorphine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Atropine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Bupivicaine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Buprenorphine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Butorphanol</div>
-      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Cefazolin</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Cerenia</div>
-      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Clindamycin</div>
-      <div onclick="info(); convenia(); checkWeight()" class="antibiotics" id="r7c2" style="display: none;">Convenia</div>
-      <div onclick="info()" class="steroids" id="r7c2" style="display: none;">Depo-Medrol</div>
-      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Dexdomitor</div>
-      <div onclick="info()" class="steroids" id="r7c2" style="display: none;">Dexamethasone</div>
-      <div onclick="info()" class="steroids" id="r7c2" style="display: none;">Dexamethasone SP</div>
-      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Diazepam</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Diphenhydramine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Dopamine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Doxapram</div>
-      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Enrofloxacin</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Epinephrine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Famotidine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Furosemide</div>
-      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Gentamicin</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Hydromorphone</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Iron Dextran</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Kenelog</div>
-      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Ketamine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Lidocaine</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Meloxicam</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Methocarbamol</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Metoclopramide</div>
-      <div onclick="info()" class="antibiotics" id="r7c2" style="display: none;">Metronidazole</div>
-      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Midazolam</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Naloxone</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Ondansetron</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Percorten-V</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Praziquantel</div>
-      <div onclick="info()" class="sedatives" id="r7c2" style="display: none;">Propofol</div>
-      <div onclick="info()" class="steroids" id="r7c2" style="display: none;">Solu-Medrol</div>
-      <div onclick="info()" class="analgesics" id="r7c2" style="display: none;">Vitamin B-12</div>
+      
+      <div onclick="info()" >Aminophylline</div>
+      <div onclick="info()"  >Apomorphine</div>
+      <div onclick="info()"  >Atropine</div>
+
+      <div onclick="info()"  >Cerenia</div>
+
+      
+      <div onclick="info()"  >Diphenhydramine</div>
+      <div onclick="info()"  >Dopamine</div>
+      <div onclick="info()"  >Doxapram</div>
+ 
+      <div onclick="info()"  >Epinephrine</div>
+      <div onclick="info()"  >Famotidine</div>
+      <div onclick="info()"  >Furosemide</div>
+  
+      <div onclick="info()"  >Iron Dextran</div>
+    
+      <div onclick="info()"  >Metoclopramide</div>
+     
+      <div onclick="info()"  >Naloxone</div>
+      <div onclick="info()"  >Ondansetron</div>
+      <div onclick="info()"  >Percorten-V</div>
+      <div onclick="info()"  >Praziquantel</div>
+      <div onclick="info()"  >Vitamin B-12</div>
       
 
     </div>
@@ -146,7 +450,7 @@
     </div>
   </div>
   
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="script.js"></script>
   <script src="injectable.js"></script>
 </body>

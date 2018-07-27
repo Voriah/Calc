@@ -68,7 +68,7 @@ function setSig6(a, b, c) {
 
 
 function convenia() {
-  var weight = document.getElementById("w").value;
+  var weight = document.getElementById("icon_weight").value;
   if (l.checked) {      //convert pounds to kg
     weight /= 2.2;
   }
