@@ -22,9 +22,7 @@ nav{
   height: 100%;
   vertical-align: middle;
   display: inline-block;
-  border-style: ridge;
-  border-width: 1px;
-  border-color: white;
+  border: 1px ridge white;
 }
 
 input::-webkit-outer-spin-button,
@@ -49,9 +47,11 @@ input::-webkit-inner-spin-button {
    color: white;
  }
 
- .collection-item{
+ li.collection-item{
    display: flex;
    flex-direction: column;
+   padding: 0;
+   
    
 
  }
@@ -59,4 +59,14 @@ input::-webkit-inner-spin-button {
  .collection{
   display: flex;
   flex-direction: column;
+  border: 1px ridge white;
+ }
+ .collection-item div {
+   padding: 0;
+   border: 1px ridge white;
+  
+ }
+ #dInput, #xInput, #dayInput {
+   color: black;
+   
  }

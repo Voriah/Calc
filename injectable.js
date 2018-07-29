@@ -6,6 +6,8 @@ var s1 = document.getElementById("sig1");
 var s2 = document.getElementById("sig2");
 var s3 = document.getElementById("sig3");
 var s4 = document.getElementById("sig4");
+var s5 = document.getElementById("sig5");
+var s6 = document.getElementById("sig6");
 
 function setSig(a, b, c, ) {
   if (s1.style.display === "none") {
@@ -65,8 +67,6 @@ function setSig6(a, b, c) {
   s6.style.display = "flex";
 }
 
-
-
 function convenia() {
   var weight = document.getElementById("icon_weight").value;
   if (l.checked) {      //convert pounds to kg
@@ -98,3 +98,7 @@ function convenia() {
  
 }
 
+function derp () {
+  var k = getElementById("sigs");
+  k.style.display = "flex";
+}

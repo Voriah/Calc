@@ -27,6 +27,11 @@ function anti(){
     var y = x[i];
     y.style.display = "none";
   }
+  var x = document.getElementsByClassName("other");
+  for (i = 0; i < x.length; i++) {
+    var y = x[i];
+    y.style.display = "none";
+  }
   }
 
 function ana() {
@@ -53,6 +58,12 @@ function ana() {
   }
 
   var x = document.getElementsByClassName("steroids");
+  for (i = 0; i < x.length; i++) {
+    var y = x[i];
+    y.style.display = "none";
+  }
+  
+  var x = document.getElementsByClassName("other");
   for (i = 0; i < x.length; i++) {
     var y = x[i];
     y.style.display = "none";
@@ -87,6 +98,12 @@ function sed() {
     var y = x[i];
     y.style.display = "none";
   }
+
+  var x = document.getElementsByClassName("other");
+  for (i = 0; i < x.length; i++) {
+    var y = x[i];
+    y.style.display = "none";
+  }
 }
 
 function ster() {
@@ -117,13 +134,54 @@ function ster() {
     var y = x[i];
     y.style.display = "none";
   }
+
+  var x = document.getElementsByClassName("other");
+  for (i = 0; i < x.length; i++) {
+    var y = x[i];
+    y.style.display = "none";
+  }
 }
 
+function othe() {
+  var x = document.getElementsByClassName("other");
+  for (i = 0; i < x.length; i++) {
+    var y = x[i];
+
+    if (y.style.display === "none") {
+      y.style.display = "flex";
+    } else {
+      y.style.display = "none";
+    }
+  }
+  var x = document.getElementsByClassName("antibiotics");
+  for (i = 0; i < x.length; i++) {
+    var y = x[i];
+    y.style.display = "none";
+  }
+
+  var x = document.getElementsByClassName("analgesics");
+  for (i = 0; i < x.length; i++) {
+    var y = x[i];
+    y.style.display = "none";
+  }
+
+  var x = document.getElementsByClassName("sedatives");
+  for (i = 0; i < x.length; i++) {
+    var y = x[i];
+    y.style.display = "none";
+  }
+
+  var x = document.getElementsByClassName("steroids");
+  for (i = 0; i < x.length; i++) {
+    var y = x[i];
+    y.style.display = "none";
+  }
+}
 function info() {
   document.getElementById("doseage").style.display = "flex";
   document.getElementById("times").style.display = "flex";
   document.getElementById("days").style.display = "flex";
-  document.getElementById("update").style.display = "flex";
+  
 }
 
 function rangeChange() {
