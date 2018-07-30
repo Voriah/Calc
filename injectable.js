@@ -102,6 +102,21 @@ function setSig7(a, b, c) {
   s7.style.display = "flex";
 }
 
+function calc(dose, conc, weight) {
+  weight = document.getElementById("icon_weight").value;
+  if (l.checked) {      //convert pounds to kg
+    weight /= 2.2;
+  }
+  else if (k.checked) {
+    weight = weight;
+  }
+  else {
+    alert("Specify weight type.");
+    return;
+  }
+  return (dose * weight / conc).toFixed(2);
+};
+
 function convenia(dose, conc, weight, r) {
   weight = document.getElementById("icon_weight").value;
   if (l.checked) {      //convert pounds to kg
@@ -128,7 +143,7 @@ function convenia(dose, conc, weight, r) {
 
   var amt = (window.dose*window.weight/window.conc);
   
-  var a = "Convenia: 80mg/kg:"; 
+  var a = "Convenia: 80 mg/mL:"; 
   var b = calc(window.dose, window.conc, window.weight);
   var c = window.dose;
 
@@ -136,7 +151,7 @@ function convenia(dose, conc, weight, r) {
  
 }
 
-function calc(dose, conc, weight) {
+function acepromazine(dose, conc, weight, r) {
   weight = document.getElementById("icon_weight").value;
   if (l.checked) {      //convert pounds to kg
     weight /= 2.2;
@@ -148,6 +163,60 @@ function calc(dose, conc, weight) {
     alert("Specify weight type.");
     return;
   }
-  return (dose*weight/conc).toFixed(2);
-};
+  
+  window.conc = 1;      //concentration
+  window.dose = 0.05;       //dosage in mg/kg
+ 
+  ranges(r);
+
+  
+  window.r.value = window.dose;
+  window.r.step = 0.01;
+  window.r.min = 0.03;
+  window.r.max = 0.1;
+
+  var amt = (window.dose*window.weight/window.conc);
+  
+  var a = "Acepromazine: 1 mg/mL:"; 
+  var b = calc(window.dose, window.conc, window.weight);
+  var c = window.dose;
+
+  setSig(a, b, c);
+ 
+}
+
+function adequan(dose, conc, weight, r) {
+  weight = document.getElementById("icon_weight").value;
+  if (l.checked) {      //convert pounds to kg
+    weight /= 2.2;
+  }
+  else if (k.checked) {
+    weight = weight;
+  }
+  else {
+    alert("Specify weight type.");
+    return;
+  }
+  
+  window.conc = 100;      //concentration
+  window.dose = 4.4;       //dosage in mg/kg
+ 
+  ranges(r);
+
+  
+  window.r.value = window.dose;
+  window.r.step = 0.1;
+  window.r.min = 4;
+  window.r.max = 5;
+
+  var amt = (window.dose*window.weight/window.conc);
+  
+  var a = "Adequan: 100 mg/mL:"; 
+  var b = calc(window.dose, window.conc, window.weight);
+  var c = window.dose;
+
+  setSig(a, b, c);
+ 
+}
+
 

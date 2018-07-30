@@ -110,7 +110,7 @@
 </div>
 
 <div class="row"> 
-    <div class="col s2"></div>
+    <div class="col s3"></div>
     <div class="col s2">
         <ul class="collection">
           <li class="collection-item">           
@@ -196,7 +196,7 @@
 
         <ul class="collection analgesics" style="display: none;">
           <li class="collection-item">
-            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Adequan
+            <a onclick="adequan()" class="center-align waves-effect waves-light btn-large z-depth-5">Adequan
               <i class="material-icons right">send</i>
             </a>
           </li>
@@ -282,7 +282,7 @@
 
         <ul class="collection sedatives" style="display: none;">
           <li class="collection-item">
-            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Acepromazine
+            <a onclick="acepromazine()" class="center-align waves-effect waves-light btn-large z-depth-5">Acepromazine
               <i class="material-icons right">send</i>
             </a>
           </li>
@@ -442,75 +442,68 @@
     
         <div class="col s2">
           <ul class="collection" id="sigs"  >
-            <li class="collection-item sigList" id="sig1" style="display: none" onclick="mgkg1.innerHTML=dRange1.value; window.dose=dRange1.value; dose1.innerHTML=calc(dose, conc, weight)">          
-              <a class="btn-floating btn-large waves-effect waves-light red">
-                <i class="material-icons">add</i>
-              </a>
+            <li class="collection-item sigList blue-grey darken-4" id="sig1" style="display: none" onclick="mgkg1.innerHTML=dRange1.value; window.dose=dRange1.value; dose1.innerHTML=calc(dose, conc, weight)">          
               <p id="sigName1"></p>
-              <p id="dose1"></p>
+              <hr style="width: 100%">
+              <p id="dose1" style="display: inline-block"></p>
               <p> mL given at</p>
-              <p id="mgkg1"></p>
-              <p class="range-field"> mg/kg<input class="" type="range" id="dRange1" min="0" max="100" oninput="mgkg1.innerHTML=dRange1.value; window.dose=dRange1.value; dose1.innerHTML=calc(dose, conc, weight)" /></p>
+              <p id="mgkg1"></p> 
+              <p>mg/kg</p>
+              <p class="range-field"><input class="" type="range" id="dRange1" min="0" max="100" oninput="mgkg1.innerHTML=dRange1.value; window.dose=dRange1.value; dose1.innerHTML=calc(dose, conc, weight)" /></p>
             </li>
-            <li class="collection-item sigList" id="sig2" style="display: none" onclick="mgkg2.innerHTML=dRange2.value; window.dose=dRange2.value; dose2.innerHTML=calc(dose, conc, weight)">          
-              <a class="btn-floating btn-large waves-effect waves-light red">
-                <i class="material-icons">add</i>
-              </a>
+            <li class="collection-item sigList blue-grey darken-4" id="sig2" style="display: none" onclick="mgkg2.innerHTML=dRange2.value; window.dose=dRange2.value; dose2.innerHTML=calc(dose, conc, weight)">          
               <p id="sigName2"></p>
+              <hr style="width: 100%">
               <p id="dose2"></p>
               <p> mL given at</p>
               <p id="mgkg2"></p>
-              <p class="range-field"> mg/kg<input class="" type="range" id="dRange2" min="0" max="100" oninput="mgkg2.innerHTML=dRange2.value; window.dose=dRange2.value; dose2.innerHTML=calc(dose, conc, weight)" /></p>
+              <p>mg/kg</p>
+              <p class="range-field"><input class="" type="range" id="dRange2" min="0" max="100" oninput="mgkg2.innerHTML=dRange2.value; window.dose=dRange2.value; dose2.innerHTML=calc(dose, conc, weight)" /></p>
             </li>
-            <li class="collection-item sigList" id="sig3" style="display: none" onclick="mgkg3.innerHTML=dRange3.value; window.dose=dRange3.value; dose3.innerHTML=calc(dose, conc, weight)">          
-              <a class="btn-floating btn-large waves-effect waves-light red">
-                <i class="material-icons">add</i>
-              </a>
+            <li class="collection-item sigList blue-grey darken-4" id="sig3" style="display: none" onclick="mgkg3.innerHTML=dRange3.value; window.dose=dRange3.value; dose3.innerHTML=calc(dose, conc, weight)">          
               <p id="sigName3"></p>
+              <hr style="width: 100%">
               <p id="dose3"></p>
               <p> mL given at</p>
               <p id="mgkg3"></p>
-              <p class="range-field"> mg/kg<input class="" type="range" id="dRange3" min="0" max="100" oninput="mgkg3.innerHTML=dRange3.value; window.dose=dRange3.value; dose3.innerHTML=calc(dose, conc, weight)" /></p>
+              <p>mg/kg</p>
+              <p class="range-field"><input class="" type="range" id="dRange3" min="0" max="100" oninput="mgkg3.innerHTML=dRange3.value; window.dose=dRange3.value; dose3.innerHTML=calc(dose, conc, weight)" /></p>
             </li>
-            <li class="collection-item sigList" id="sig4" style="display: none" onclick="mgkg4.innerHTML=dRange4.value; window.dose=dRange4.value; dose4.innerHTML=calc(dose, conc, weight)">          
-              <a class="btn-floating btn-large waves-effect waves-light red">
-                <i class="material-icons">add</i>
-              </a>
+            <li class="collection-item sigList blue-grey darken-4" id="sig4" style="display: none" onclick="mgkg4.innerHTML=dRange4.value; window.dose=dRange4.value; dose4.innerHTML=calc(dose, conc, weight)">          
               <p id="sigName4"></p>
+              <hr style="width: 100%">
               <p id="dose4"></p>
               <p> mL given at</p>
               <p id="mgkg4"></p>
-              <p class="range-field"> mg/kg<input class="" type="range" id="dRange4" min="0" max="100" oninput="mgkg4.innerHTML=dRange4.value; window.dose=dRange4.value; dose4.innerHTML=calc(dose, conc, weight)" /></p>
+              <p>mg/kg</p>
+              <p class="range-field"><input class="" type="range" id="dRange4" min="0" max="100" oninput="mgkg4.innerHTML=dRange4.value; window.dose=dRange4.value; dose4.innerHTML=calc(dose, conc, weight)" /></p>
             </li>
-            <li class="collection-item sigList" id="sig5" style="display: none" onclick="mgkg5.innerHTML=dRange5.value; window.dose=dRange5.value; dose5.innerHTML=calc(dose, conc, weight)">          
-              <a class="btn-floating btn-large waves-effect waves-light red">
-                <i class="material-icons">add</i>
-              </a>
+            <li class="collection-item sigList blue-grey darken-4" id="sig5" style="display: none" onclick="mgkg5.innerHTML=dRange5.value; window.dose=dRange5.value; dose5.innerHTML=calc(dose, conc, weight)">          
               <p id="sigName5"></p>
+              <hr style="width: 100%">
               <p id="dose5"></p>
               <p> mL given at</p>
               <p id="mgkg5"></p>
-              <p class="range-field"> mg/kg<input class="" type="range" id="dRange5" min="0" max="100" oninput="mgkg5.innerHTML=dRange5.value; window.dose=dRange5.value; dose5.innerHTML=calc(dose, conc, weight)" /></p>
+              <p>mg/kg</p>
+              <p class="range-field"><input class="" type="range" id="dRange5" min="0" max="100" oninput="mgkg5.innerHTML=dRange5.value; window.dose=dRange5.value; dose5.innerHTML=calc(dose, conc, weight)" /></p>
             </li>
-            <li class="collection-item sigList" id="sig6" style="display: none" onclick="mgkg6.innerHTML=dRange6.value; window.dose=dRange6.value; dose6.innerHTML=calc(dose, conc, weight)">          
-              <a class="btn-floating btn-large waves-effect waves-light red">
-                <i class="material-icons">add</i>
-              </a>
+            <li class="collection-item sigList blue-grey darken-4" id="sig6" style="display: none" onclick="mgkg6.innerHTML=dRange6.value; window.dose=dRange6.value; dose6.innerHTML=calc(dose, conc, weight)">          
               <p id="sigName6"></p>
+              <hr style="width: 100%">
               <p id="dose6"></p>
               <p> mL given at</p>
               <p id="mgkg6"></p>
-              <p class="range-field"> mg/kg<input class="" type="range" id="dRange6" min="0" max="100" oninput="mgkg6.innerHTML=dRange6.value; window.dose=dRange6.value; dose6.innerHTML=calc(dose, conc, weight)" /></p>
+              <p>mg/kg</p>
+              <p class="range-field"><input class="" type="range" id="dRange6" min="0" max="100" oninput="mgkg6.innerHTML=dRange6.value; window.dose=dRange6.value; dose6.innerHTML=calc(dose, conc, weight)" /></p>
             </li>
-            <li class="collection-item sigList" id="sig7" style="display: none" onclick="mgkg7.innerHTML=dRange7.value; window.dose=dRange7.value; dose7.innerHTML=calc(dose, conc, weight)">          
-              <a class="btn-floating btn-large waves-effect waves-light red">
-                <i class="material-icons">add</i>
-              </a>
+            <li class="collection-item sigList blue-grey darken-4" id="sig7" style="display: none" onclick="mgkg7.innerHTML=dRange7.value; window.dose=dRange7.value; dose7.innerHTML=calc(dose, conc, weight)">          
               <p id="sigName7"></p>
+              <hr style="width: 100%">
               <p id="dose7"></p>
               <p> mL given at</p>
               <p id="mgkg7"></p>
-              <p class="range-field"> mg/kg<input class="" type="range" id="dRange7" min="0" max="100" oninput="mgkg7.innerHTML=dRange7.value; window.dose=dRange7.value; dose7.innerHTML=calc(dose, conc, weight)" /></p>
+              <p>mg/kg</p>
+              <p class="range-field"><input class="" type="range" id="dRange7" min="0" max="100" oninput="mgkg7.innerHTML=dRange7.value; window.dose=dRange7.value; dose7.innerHTML=calc(dose, conc, weight)" /></p>
             </li>
             <!-- <li class="collection-item" id="sig2" style="display: none;">
               <p id="sigName2"></p>

@@ -73,19 +73,14 @@ input::-webkit-inner-spin-button {
    
  }
 #sig1, #sig2, #sig3, #sig4, #sig5, #sig6, #sig7{
+  flex-flow: wrap; 
   justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  background-color: slategray;
+
 }
 .sigList p{
   margin-right: 3px;
-  background-color: slategray;
   color: white;
   font-family: tinos;
+  text-shadow: 1px 1px black; 
 }
-.sigList a{
-  position: absolute;
-  margin-left: 50%;
-  margin-top: 10%;
-}
+
