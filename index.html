@@ -73,7 +73,7 @@
           <p>
             
             <label>
-              <input id="lb" name="group1" type="radio" checked />
+              <input id="lb" name="group1" type="radio" />
               <span>Pounds</span>
             </label>
           </p>
@@ -113,40 +113,34 @@
     <div class="col s2"></div>
     <div class="col s2">
         <ul class="collection">
-          <li class="collection-item">
-            <div onclick="anti()" id="r1c1">Antibiotics
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+          <li class="collection-item">           
+              <a onclick="anti()" class="center-align waves-effect waves-light btn-large z-depth-5">Antibiotics
+                <i class="material-icons right">send</i>
+              </a>  
           </li>
           <li class="collection-item">
-            <div onclick="ana()" id="r2c1">Analgesics
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="ana()" class="center-align waves-effect waves-light btn-large z-depth-5">Analgesics
+              <i class="material-icons right">send</i>
+            </a>
+          <li class="collection-item">
+            <a onclick="gast()" class="center-align waves-effect waves-light btn-large z-depth-5">Gastrointestinal
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="sed()" id="r3c1">Sedatives
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="sed()" class="center-align waves-effect waves-light btn-large z-depth-5">Sedatives
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="ster()" id="r4c1">Steroids
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="ster()" class="center-align waves-effect waves-light btn-large z-depth-5">Steroids
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="othe()" id="r4c1">Other
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="othe()" class="center-align waves-effect waves-light btn-large z-depth-5">Other
+              <i class="material-icons right">send</i>
+            </a>
           </li>
         </ul>
     </div>
@@ -156,363 +150,289 @@
     <div class="col s2">
         <ul class="collection antibiotics" style="display: none;">
           <li class="collection-item">
-            <div onclick="info()"  id="">Amikacin
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Amikacin
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Amoxicillin
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Amoxicillin
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item ">
-            <div onclick="info()">Ampicillin
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Ampicillin
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Cefazolin
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Cefazolin
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Clindamycin
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Clindamycin
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="derp()">Convenia
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info(); convenia()" class="center-align waves-effect waves-light btn-large z-depth-5">Convenia
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Enrofloxacin
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Enrofloxacin
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Gentamicin
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Gentamicin
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Metronidazole
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Metronidazole
+              <i class="material-icons right">send</i>
+            </a>
           </li>
         </ul>
 
         <ul class="collection analgesics" style="display: none;">
           <li class="collection-item">
-            <div onclick="info()" id="">Adequan
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Adequan
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Bupivicaine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Bupivicaine
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item ">
-            <div onclick="info()">Buprenorphine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Buprenorphine
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Butorphanol
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Butorphanol
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Hydromorphone
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Flumazenil
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Lidocaine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Hydromorphone
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Meloxicam
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Lidocaine
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Methocarbamol
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Meloxicam
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Methocarbamol
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Naloxone
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+        </ul>
+        
+        <ul class="collection gastro" style="display: none;">
+          <li class="collection-item">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Apomorphone
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Cerenia
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+          <li class="collection-item ">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Famotidine
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Metoclopramide
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Ondansetron
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Pantoprozole
+              <i class="material-icons right">send</i>
+            </a>
           </li>
         </ul>
 
         <ul class="collection sedatives" style="display: none;">
           <li class="collection-item">
-            <div onclick="info()" id="">Acepromazine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Acepromazine
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()" id="">Antesedan
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Antesedan
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Dexdomitor
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Dexdomitor
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item ">
-            <div onclick="info()">Diazepam
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Diazepam
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Ketamine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Ketamine
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Midazolam
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Midazolam
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Propofol
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Propofol
+              <i class="material-icons right">send</i>
+            </a>
           </li>
         </ul>
 
         <ul class="collection steroids" style="display: none;">
           <li class="collection-item">
-            <div onclick="info()" id="">Depo-Medrol
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Depo-Medrol
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Dexamethasone
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Dexamethasone
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item ">
-            <div onclick="info()">Dexamethasone SP
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Dexamethasone SP
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Kenelog
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Kenelog
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Solu-Medrol
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Percorten-V
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Solu-Delta-Cortef
+              <i class="material-icons right">send</i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Solu-Medrol
+              <i class="material-icons right">send</i>
+            </a>
           </li>
         </ul>
         
         
         <ul class="collection other" style="display: none;">
           <li class="collection-item">
-            <div onclick="info()" id="">Aminophylline
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
-          </li>
-          <li class="collection-item">
-            <div onclick="info()">Apomorphine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Aminophylline
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item ">
-            <div onclick="info()">Atropine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Atropine
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Cerenia
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Diphenhydramine
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Diphenhydramine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Dopamine
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Dopamine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Doxapram
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Doxapram
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Epinephrine
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Epinephrine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Furosemide
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Famotidine
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Iron Dextran
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Furosemide
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Praziquantel
+              <i class="material-icons right">send</i>
+            </a>
           </li>
           <li class="collection-item">
-            <div onclick="info()">Iron Dextran
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
-          </li>
-          <li class="collection-item">
-            <div onclick="info()">Metoclopramide
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
-          </li>
-          <li class="collection-item">
-            <div onclick="info()">Naloxone
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
-          </li>
-          <li class="collection-item">
-            <div onclick="info()">Ondansetron
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
-          </li>
-          <li class="collection-item">
-            <div onclick="info()">Percorten-V
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
-          </li>
-          <li class="collection-item">
-            <div onclick="info()">Praziquantel
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
-          </li>
-          <li class="collection-item">
-            <div onclick="info()">Vitamin B-12
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
+            <a onclick="info()" class="center-align waves-effect waves-light btn-large z-depth-5">Vitamin B-12
+              <i class="material-icons right">send</i>
+            </a>
           </li>
         </ul>
     </div>
     
     <div class="col s2">
-      <ul class="collection">
-        <li class="collection-item ">  
-          <div onclick="" id="dosage" class="input-field"><center>Dose: mg/kg</center>
+      <ul class="collection" id="dosage" style="display: none;">
+        <li class="collection-item">  
+          <div onclick="" id="" class="input-field"><center>Dose: mg/kg</center>
             <input placeholder="Dose" id="dInput" type="number" maxlength="4" oninput="dRange.value=dInput.value; this.value=this.value.slice(0,this.maxLength)">  
               <p class="range-field"></p>
                 <input class="" type="range" id="dRange" min="0" max="100" oninput="dInput.value=dRange.value"/>
               </p>      
             </div>  
         </li>
-        <li class="collection-item">
-          <div onclick="" id="times" class="input-field" ><center>Times per day</center>
+        <li class="collection-item" id="times">
+          <div onclick=""  class="input-field" ><center>Times per day</center>
             <input placeholder="Times per day" id="xInput" type="number" maxlength="4" oninput="xRange.value=xInput.value; this.value=this.value.slice(0,this.maxLength)">
             <p class="range-field"></p>
             <input class="" type="range" id="xRange" min="0" max="4" oninput="xInput.value=xRange.value" />
             </p>
           </div>
         </li>
-        <li class="collection-item ">
-          <div onclick="" id="days" class="input-field" ><center>Number of days</center>
+        <li class="collection-item" id="days">
+          <div onclick="" class="input-field" ><center>Number of days</center>
             <input placeholder="Number of days" id="dayInput" type="number" maxlength="4" oninput="dayRange.value=dayInput.value; this.value=this.value.slice(0,this.maxLength)">
             <p class="range-field">
             <input class="" type="range" id="dayRange" min="0" max="100" oninput="dayInput.value=dayRange.value" />
@@ -523,36 +443,46 @@
     </div>
     
         <div class="col s2">
-          <ul class="collection" id="sigs" style="display: none;" >
-            <li class="collection-item" id="sig1" style="">
-              <p id="sigName1">asdfasdfasdasfdf</p>
+          <ul class="collection" id="sigs"  >
+            <li class="collection-item" id="sig1" style="display: none;">
+              <p id="sigName1"></p>
               <p id="dose1"></p>
               <p id="mgkg1"></p>
             </li>
-            <li class="collection-item" id="sig2" style="">
+            <li class="collection-item" id="sig2" style="display: none;">
               <p id="sigName2"></p>
               <p id="dose2"></p>
               <p id="mgkg2"></p>
             </li>
-            <li class="collection-item" id="sig3" style="">
+            <li class="collection-item" id="sig3" style="display: none;">
               <p id="sigName3"></p>
               <p id="dose3"></p>
               <p id="mgkg3"></p>
             </li>
-            <li class="collection-item" id="sig4" style="">
+            <li class="collection-item" id="sig4" style="display: none;">
               <p id="sigName4"></p>
               <p id="dose4"></p>
               <p id="mgkg4"></p>
             </li>
-            <li class="collection-item" id="sig5" style="">
+            <li class="collection-item" id="sig5" style="display: none;">
               <p id="sigName5"></p>
               <p id="dose5"></p>
               <p id="mgkg5"></p>
             </li>
-            <li class="collection-item" id="sig6" style="">
+            <li class="collection-item" id="sig6" style="display: none;">
               <p id="sigName6"></p>
-              <p id="dose6"></p>
+              <p id="dose6" class="inline"></p>
               <p id="mgkg6"></p>
+            </li>
+            <li class="collection-item" id="sig7" style="display: none;">
+              <p id="sigName7"></p>
+              <p id="dose7" class="inline"></p>
+              <p id="mgkg7"></p>
+            </li>
+            <li class="collection-item" id="reset" onclick="reset()">
+              <a class="center-align  waves-effect waves-light btn-large z-depth-5">Reset
+                <i class="material-icons right">replay</i>
+              </a>
             </li>
           </ul>
         </div>

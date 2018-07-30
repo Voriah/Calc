@@ -51,19 +51,19 @@ input::-webkit-inner-spin-button {
    display: flex;
    flex-direction: column;
    padding: 0;
-   
-   
-
  }
 
+#sigs{
+  border: none;
+}
  .collection{
   display: flex;
   flex-direction: column;
   border: 1px ridge white;
+  border-radius: 5px;
  }
- .collection-item div {
-   padding: 0;
-   border: 1px ridge white;
+ .collection-item a{
+   font-size: 13px;
   
  }
  #dInput, #xInput, #dayInput {

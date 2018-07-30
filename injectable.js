@@ -8,6 +8,7 @@ var s3 = document.getElementById("sig3");
 var s4 = document.getElementById("sig4");
 var s5 = document.getElementById("sig5");
 var s6 = document.getElementById("sig6");
+var s7 = document.getElementById("sig7");
 
 function setSig(a, b, c, ) {
   if (s1.style.display === "none") {
@@ -27,6 +28,9 @@ function setSig(a, b, c, ) {
   }
   else if (s6.style.display === "none") {
     setSig6(a, b, c);
+  }
+  else if (s7.style.display === "none") {
+    setSig7(a, b, c);
   }
 }
 
@@ -66,6 +70,12 @@ function setSig6(a, b, c) {
   mgkg6.innerHTML = c;
   s6.style.display = "flex";
 }
+function setSig7(a, b, c) {
+  sigName7.innerHTML = a;
+  dose7.innerHTML = b;
+  mgkg7.innerHTML = c;
+  s7.style.display = "flex";
+}
 
 function convenia() {
   var weight = document.getElementById("icon_weight").value;
@@ -77,6 +87,7 @@ function convenia() {
   }
   else {
     alert("Specify weight type.");
+    return;
   }
   
   var conc = 80;      //concentration
@@ -96,9 +107,4 @@ function convenia() {
 
   setSig(a, b, c);
  
-}
-
-function derp () {
-  var k = getElementById("sigs");
-  k.style.display = "flex";
 }
