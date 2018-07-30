@@ -245,18 +245,21 @@ function gast() {
 }
 
 function info() {
+  if (l.checked) {      //convert pounds to kg
+  }
+  else if (k.checked) {
+  }
+  else {
+    alert("Specify weight type.");
+    return;
+  }
+
   document.getElementById("dosage").style.display = "flex";
   document.getElementById("times").style.display = "none";
   document.getElementById("days").style.display = "none";
   
 }
 
-function rangeChange() {
-  var x = document.getElementById("dInput");
-  var y = document.getElementById("dRange");
-  y.value = x.value;
-
-}
 
 function reset() {
  document.getElementById("sig1").style.display = "none";
@@ -265,4 +268,13 @@ function reset() {
  document.getElementById("sig4").style.display = "none";
  document.getElementById("sig5").style.display = "none";
  document.getElementById("sig6").style.display = "none";
+ document.getElementById("sig7").style.display = "none";
+
 }
+
+(function ($) {
+  $(function () {          
+    $('.modal').modal();
+    $('.trigger-modal').modal();
+  }); 
+})(jQuery); 

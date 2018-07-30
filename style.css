@@ -41,6 +41,7 @@ input::-webkit-inner-spin-button {
 
  .input-field{
    margin-top: 20px;
+   margin-bottom: 0;
  }
 
  input{
@@ -61,6 +62,7 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   border: 1px ridge white;
   border-radius: 5px;
+  margin-top: 0;
  }
  .collection-item a{
    font-size: 13px;
@@ -70,3 +72,20 @@ input::-webkit-inner-spin-button {
    color: black;
    
  }
+#sig1, #sig2, #sig3, #sig4, #sig5, #sig6, #sig7{
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  background-color: slategray;
+}
+.sigList p{
+  margin-right: 3px;
+  background-color: slategray;
+  color: white;
+  font-family: tinos;
+}
+.sigList a{
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 10%;
+}

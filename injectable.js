@@ -1,7 +1,6 @@
 var l = document.getElementById("lb");
 var k = document.getElementById("kg");
-var r = document.getElementById("dRange");
-var d = document.getElementById("dInput");
+var r = document.getElementById("dRange1");
 var s1 = document.getElementById("sig1");
 var s2 = document.getElementById("sig2");
 var s3 = document.getElementById("sig3");
@@ -9,6 +8,9 @@ var s4 = document.getElementById("sig4");
 var s5 = document.getElementById("sig5");
 var s6 = document.getElementById("sig6");
 var s7 = document.getElementById("sig7");
+var dose = 10;
+var conc = 10;
+var weight = 10;
 
 function setSig(a, b, c, ) {
   if (s1.style.display === "none") {
@@ -31,6 +33,29 @@ function setSig(a, b, c, ) {
   }
   else if (s7.style.display === "none") {
     setSig7(a, b, c);
+  }
+}
+function ranges(r) {
+  if (s1.style.display === "none") {
+    window.r = document.getElementById("dRange1");
+  }
+  else if (s2.style.display === "none") {
+    window.r = document.getElementById("dRange2");
+  }
+  else if (s3.style.display === "none") {
+    window.r = document.getElementById("dRange3");
+  }
+  else if (s4.style.display === "none") {
+    window.r = document.getElementById("dRange4");
+  }
+  else if (s5.style.display === "none") {
+    window.r = document.getElementById("dRange5");
+  }
+  else if (s6.style.display === "none") {
+    window.r = document.getElementById("dRange6");
+  }
+  else if (s7.style.display === "none") {
+    window.r = document.getElementById("dRange7");
   }
 }
 
@@ -77,8 +102,8 @@ function setSig7(a, b, c) {
   s7.style.display = "flex";
 }
 
-function convenia() {
-  var weight = document.getElementById("icon_weight").value;
+function convenia(dose, conc, weight, r) {
+  weight = document.getElementById("icon_weight").value;
   if (l.checked) {      //convert pounds to kg
     weight /= 2.2;
   }
@@ -90,21 +115,39 @@ function convenia() {
     return;
   }
   
-  var conc = 80;      //concentration
-  var dose = 8;       //dosage in mg/kg
+  window.conc = 80;      //concentration
+  window.dose = 8;       //dosage in mg/kg
  
-  d.value = dose;  
-  r.value = dose;
-  r.step = 0.5;
-  r.min = 6;
-  r.max = 10;
+  ranges(r);
 
-  var amt = (dose*weight/conc);
   
-  var a = "Convenia: 80mg/kg "; 
-  var b = amt.toFixed(2) + " mL given at";
-  var c = dose + " mg/kg";
+  window.r.value = window.dose;
+  window.r.step = 0.5;
+  window.r.min = 6;
+  window.r.max = 10;
+
+  var amt = (window.dose*window.weight/window.conc);
+  
+  var a = "Convenia: 80mg/kg:"; 
+  var b = calc(window.dose, window.conc, window.weight);
+  var c = window.dose;
 
   setSig(a, b, c);
  
 }
+
+function calc(dose, conc, weight) {
+  weight = document.getElementById("icon_weight").value;
+  if (l.checked) {      //convert pounds to kg
+    weight /= 2.2;
+  }
+  else if (k.checked) {
+    weight = weight;
+  }
+  else {
+    alert("Specify weight type.");
+    return;
+  }
+  return (dose*weight/conc).toFixed(2);
+};
+
