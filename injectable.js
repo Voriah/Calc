@@ -12,7 +12,8 @@ var dose = 10;
 var conc = 10;
 var weight = 10;
 
-function setSig(a, b, c, ) {
+
+function setSig(a, b, c) {
   if (s1.style.display === "none") {
     setSig1(a, b, c);
   }
@@ -206,12 +207,80 @@ function adequan(dose, conc, weight, r) {
   
   window.r.value = window.dose;
   window.r.step = 0.1;
-  window.r.min = 4;
-  window.r.max = 5;
+  window.r.min = 3.9;
+  window.r.max = 4.9;
 
   var amt = (window.dose*window.weight/window.conc);
   
   var a = "Adequan: 100 mg/mL:"; 
+  var b = calc(window.dose, window.conc, window.weight);
+  var c = window.dose;
+
+  setSig(a, b, c);
+ 
+}
+
+function amikacin(dose, conc, weight, r) {
+  weight = document.getElementById("icon_weight").value;
+  if (l.checked) {      //convert pounds to kg
+    weight /= 2.2;
+  }
+  else if (k.checked) {
+    weight = weight;
+  }
+  else {
+    alert("Specify weight type.");
+    return;
+  }
+  
+  window.conc = 250;      //concentration
+  window.dose = 10;       //dosage in mg/kg
+ 
+  ranges(r);
+
+  
+  window.r.value = window.dose;
+  window.r.step = 0.5;
+  window.r.min = 8;
+  window.r.max = 12;
+
+  var amt = (window.dose*window.weight/window.conc);
+  
+  var a = "Amikacin: 250 mg/mL:"; 
+  var b = calc(window.dose, window.conc, window.weight);
+  var c = window.dose;
+
+  setSig(a, b, c);
+ 
+}
+
+function aminophylline(dose, conc, weight, r, am) {
+  weight = document.getElementById("icon_weight").value;
+  if (l.checked) {      //convert pounds to kg
+    weight /= 2.2;
+  }
+  else if (k.checked) {
+    weight = weight;
+  }
+  else {
+    alert("Specify weight type.");
+    return;
+  }
+  
+  window.conc = 25;      //concentration
+  window.dose = 7;       //dosage in mg/kg
+ 
+  ranges(r);
+
+  
+  window.r.value = window.dose;
+  window.r.step = 1;
+  window.r.min = 3;
+  window.r.max = 11;
+
+  var amt = (window.dose*window.weight/window.conc);
+  
+  var a = "Aminophylline: 25 mg / mL:"; 
   var b = calc(window.dose, window.conc, window.weight);
   var c = window.dose;
 
